@@ -1,5 +1,5 @@
 #include<iostream>
-
+#include"SudokuLoader_1.h"
 #define SudokuMax 1000000
 
 using namespace std;
@@ -9,18 +9,31 @@ void reportError()
 	cout << "Program argument error" << endl;
 }
 
-int main(int argc, char *argv[])//ÃüÁîÐÐÆô¶¯³ÌÐò²ÎÊý¸öÊý£¬ÃüÁîÐÐ²ÎÊýÊý×é
+void createSudoku(fstream& sudokuFile, int sudokuCount)
 {
-	if (argc != 3)//²ÎÊý¸öÊý²»ÕýÈ·
+	//ç”Ÿæˆæ•°ç‹¬
+	
+
+	//å°†æ•°ç‹¬ä¿å­˜è‡³æ–‡ä»¶
+	SudokuLoader loader = SudokuLoader();
+	loader.writeToFile();
+}
+
+int main(int argc, char *argv[])//å‘½ä»¤è¡Œå¯åŠ¨ç¨‹åºå‚æ•°ä¸ªæ•°ï¼Œå‘½ä»¤è¡Œå‚æ•°æ•°ç»„
+{
+	if (argc != 3)//å‚æ•°ä¸ªæ•°ä¸æ­£ç¡®
 	{
 		reportError();
 		return 0;
 	}
-	if (strcmp(argv[1], "-c") == 0 && atoi(argv[2]) > 0 && atoi(argv[2]) <= SudokuMax)//Éú³ÉÊý¶ÀÖÕ¾ÖÃüÁî£¬ÇÒÉú³ÉÊýÁ¿ºÏ·¨ 
+	if (strcmp(argv[1], "-c") == 0 && atoi(argv[2]) > 0 && atoi(argv[2]) <= SudokuMax)//ç”Ÿæˆæ•°ç‹¬ç»ˆå±€å‘½ä»¤ï¼Œä¸”ç”Ÿæˆæ•°é‡åˆæ³• 
 	{
-		;
+		fstream sudokuFile;
+		sudokuFile.open("sudoku.txt", ios::out);
+		createSudoku(sudokuFile, atoi(argv[2]));
+		sudokuFile.close();
 	}
-	else if (strcmp(argv[1], "-s") == 0)//Çó½âÊý¶ÀÃüÁî
+	else if (strcmp(argv[1], "-s") == 0)//æ±‚è§£æ•°ç‹¬å‘½ä»¤
 	{
 		;
 	}
