@@ -1,25 +1,25 @@
 #include<iostream>
 #include"DLXNode_1.h"
 
-void DLXNode::appendLeftNode(DLXNode *tempNode)//链接节点
+void DLXNode_1::appendLeftNode(DLXNode_1 *tempNode)//链接节点
 {
 	this->leftNode = tempNode;
 	tempNode->rightNode = this;
 }
 
-void DLXNode::appendRightNode(DLXNode *tempNode)
+void DLXNode_1::appendRightNode(DLXNode_1 *tempNode)
 {
 	this->rightNode = tempNode;
 	tempNode->leftNode = this;
 }
 
-void DLXNode::appendUpNode(DLXNode *tempNode)
+void DLXNode_1::appendUpNode(DLXNode_1 *tempNode)
 {
 	this->upNode = tempNode;
 	tempNode->downNode = this;
 }
 
-void DLXNode::appendDownNode(DLXNode *tempNode)
+void DLXNode_1::appendDownNode(DLXNode_1 *tempNode)
 {
 	this->downNode = tempNode;
 	tempNode->upNode = this;
