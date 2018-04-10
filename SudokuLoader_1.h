@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class SudokuLoader
+class SudokuLoader_1
 {
 public:
 	vector<vector<int>> loadFromFile(fstream& file);
