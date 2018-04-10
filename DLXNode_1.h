@@ -33,7 +33,7 @@ public:
 };
 
 
-class CommonNode : public DLXNode {//普通节点继承DLXNode
+class CommonNode : public DLXNode_1 {//普通节点继承DLXNode
 public:
 	int rowIndex;
 	ColumnHead *columnHead = NULL;
