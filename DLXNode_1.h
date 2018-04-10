@@ -1,27 +1,27 @@
 #pragma once
 #include<iostream>
 
-class DLXNode //十字链表
+class DLXNode_1 //十字链表
 {
 public:
-	DLXNode *leftNode = NULL;//各方向指针
-	DLXNode *rightNode=NULL;
-	DLXNode *upNode=NULL;
-	DLXNode *downNode=NULL;
+	DLXNode_1 *leftNode = NULL;//各方向指针
+	DLXNode_1 *rightNode=NULL;
+	DLXNode_1 *upNode=NULL;
+	DLXNode_1 *downNode=NULL;
 	int commomIndex = -1;
 
-	DLXNode() :leftNode(this), rightNode(this), upNode(this), downNode(this) {};
+	DLXNode_1() :leftNode(this), rightNode(this), upNode(this), downNode(this) {};
 
-	void appendLeftNode(DLXNode *tempNode);
+	void appendLeftNode(DLXNode_1 *tempNode);
 
-	void appendRightNode(DLXNode *tempNode);
+	void appendRightNode(DLXNode_1 *tempNode);
 
-	void appendUpNode(DLXNode *tempNode);
+	void appendUpNode(DLXNode_1 *tempNode);
 
-	void appendDownNode(DLXNode *tempNode);
+	void appendDownNode(DLXNode_1 *tempNode);
 };
 
-class ColumnHead :public DLXNode//列头节点继承DLXNode
+class ColumnHead :public DLXNode_1//列头节点继承DLXNode
 {
 public:
 	int numberOfOne = 0;
