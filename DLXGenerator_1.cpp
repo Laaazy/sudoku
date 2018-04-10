@@ -30,11 +30,11 @@ void DLXGenerator_1::appendLine(vector<ColumnHead_1*> columnHeads, vector<int> e
 		CommonNode_1 *currentNode = new CommonNode_1(rowIndex, columnHead);
 		DLXNode_1 *lastVerticalNode = columnHead->upNode;
 
-		//Link vertical nodes
+		//链接垂直节点
 		lastVerticalNode->appendDownNode(currentNode);
 		currentNode->appendDownNode(columnHead);
 
-		//Link horizontal nodes
+		//链接水平节点
 		if (i == 0) {
 			firstHorizontalNode = currentNode;
 			lastHorizontalNode = currentNode;
