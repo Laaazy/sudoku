@@ -6,7 +6,7 @@
 #define sudokuLength 9
 
 //从特定文件将数独装载入向量
-vector<vector<int>> SudokuLoader::loadFromFile(fstream& file)
+vector<vector<int>> SudokuLoader_1::loadFromFile(fstream& file)
 {
 	vector<vector<int>> sudokuset;
 	stringstream buffer;
@@ -46,7 +46,7 @@ vector<vector<int>> SudokuLoader::loadFromFile(fstream& file)
 }
 
 //将二维数独向量sudokuset保存至文件
-void SudokuLoader::writeToFile(vector<vector<int>>& sudokuset, fstream& file) 
+void SudokuLoader_1::writeToFile(vector<vector<int>>& sudokuset, fstream& file) 
 {
 	int sudokucount = sudokuset.size();
 	for (int i = 0; i < sudokucount; ++i)//循环处理每个数独
