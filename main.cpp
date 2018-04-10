@@ -11,12 +11,14 @@ void reportError()
 
 void createSudoku(fstream& sudokuFile, int sudokuCount)
 {
-	//生成数独
-	
+	//生成数独二维向量
+	SudokuGenerator_1 generator = SudokuGenerator_1();
+	vector<vector<int>> answers = generator.generateSudokus(sudokuCount);
 
-	//将数独保存至文件
-	SudokuLoader loader = SudokuLoader();
-	loader.writeToFile();
+
+	//将数独二维向量保存至文件
+	SudokuLoader_1 loader = SudokuLoader_1();
+	loader.writeToFile(answers, sudokuFile);
 }
 
 int main(int argc, char *argv[])//命令行启动程序参数个数，命令行参数数组
