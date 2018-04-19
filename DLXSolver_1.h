@@ -5,7 +5,8 @@
 
 using namespace std;
 
-class DLXSolver_1 {
+class DLXSolver_1
+{
 public:
 	//得到一种解
 	bool solveWithOneAnswer(DLXNode_1 *listHead, vector<CommonNode_1*>& solution, int depth);
