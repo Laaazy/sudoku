@@ -8,7 +8,7 @@ public:
 	DLXNode_1 *rightNode=NULL;
 	DLXNode_1 *upNode=NULL;
 	DLXNode_1 *downNode=NULL;
-	int commomIndex = -1;
+	int columnIndex = -1;
 
 	DLXNode_1() :leftNode(this), rightNode(this), upNode(this), downNode(this) {};
 
@@ -21,22 +21,22 @@ public:
 	void appendDownNode(DLXNode_1 *tempNode);
 };
 
-class ColumnHead :public DLXNode_1//列头节点继承DLXNode
+class ColumnHead_1 :public DLXNode_1//列头节点继承DLXNode
 {
 public:
 	int numberOfOne = 0;
 
-	ColumnHead(int columnIndex)//构造器
+	ColumnHead_1(int columnIndex)//构造器
 	{
-		this->commomIndex = columnIndex;
+		this->columnIndex = columnIndex;
 	}
 };
 
 
-class CommonNode : public DLXNode_1 {//普通节点继承DLXNode
+class CommonNode_1: public DLXNode_1 {//普通节点继承DLXNode
 public:
 	int rowIndex;
-	ColumnHead *columnHead = NULL;
+	ColumnHead_1 *columnHead = NULL;
 
-	CommonNode(int rowIndex, ColumnHead *columnHead) : rowIndex(rowIndex), columnHead(columnHead) {}
+	CommonNode_1(int rowIndex, ColumnHead_1 *columnHead) : rowIndex(rowIndex), columnHead(columnHead) {}
 };
