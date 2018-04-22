@@ -34,7 +34,7 @@ void solvePuzzle(fstream& puzzleFile) {
 
 	
 	fstream solutionFile;
-	solutionFile.open("C:\\Visual_Studio_C_Programs\\Sudoku\\sudoku\\Debug\\sudoku.txt", ios::out);
+	solutionFile.open("sudoku.txt", ios::out);
 	if (answers.size() == 0) {
 		cout << "No solutions for all sudokus" << endl;
 	}
@@ -66,7 +66,7 @@ int main(int argc, char *argv[])//命令行启动程序参数个数，命令行�
 	if (strcmp(argv[1], "-c") == 0 && atoi(argv[2]) > 0 && atoi(argv[2]) <= SudokuMax)//生成数独终局命令，且生成数量合法 
 	{
 		fstream sudokuFile;
-		sudokuFile.open("C:\\Visual_Studio_C_Programs\\Sudoku\\sudoku\\Debug\\sudoku.txt", ios::out);
+		sudokuFile.open("sudoku.txt", ios::out);
 		createSudoku(sudokuFile, atoi(argv[2]));
 		sudokuFile.close();
 	}
