@@ -1,4 +1,4 @@
-/*#include "DLXGenerator_1.h"
+#include "DLXGenerator_1.h"
 
 //加入一行空链表
 vector<ColumnHead_1 *> DLXGenerator_1::createColumnHeads(DLXNode_1 *listHead, int length) 
@@ -54,4 +54,3 @@ void DLXGenerator_1::appendLine(vector<ColumnHead_1*> columnHeads, vector<int> e
 
 	lastHorizontalNode->appendRightNode(firstHorizontalNode);
 }
-*/
